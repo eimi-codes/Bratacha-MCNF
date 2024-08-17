@@ -1,3 +1,7 @@
+## [0.4.4](https://github.com/eimi-codes/Bratacha-MCNF/compare/v0.4.3...v0.4.4) (2024-08-17)
+
+
+
 ## [0.4.3](https://github.com/eimi-codes/Bratacha-MCNF/compare/v0.4.2...v0.4.3) (2024-08-17)
 
 
@@ -31,15 +35,6 @@
 ### Features
 
 * upgrade release asset ([3e73d95](https://github.com/eimi-codes/Bratacha-MCNF/commit/3e73d951917f6707bbc12f689313f590d356d0ca))
-
-
-
-# [0.2.0](https://github.com/eimi-codes/Bratacha-MCNF/compare/v0.1.1...v0.2.0) (2024-08-17)
-
-
-### Features
-
-* Add F1 chequered flag image and Pirate flag image ([0783095](https://github.com/eimi-codes/Bratacha-MCNF/commit/0783095c4be45ad2514680037b8cb632f36271b7))
 
 
 
