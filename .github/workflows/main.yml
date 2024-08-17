@@ -66,6 +66,7 @@ jobs:
           body: ${{ steps.changelog.outputs.clean_changelog }}
       - name: Upload Release Artifact
         uses: actions/upload-release-asset@v1.0.1
+        if: ${{ steps.changelog.outputs.skipped == 'false' }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
