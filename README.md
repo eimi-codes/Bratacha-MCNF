@@ -30,5 +30,5 @@ This mod is inspired by [Flags That Represent](https://www.curseforge.com/minecr
 ## Dependencies
 
 - This mod requires [NeoForged]() to run. Please ensure you have the latest version of NeoForged installed before attempting to run this mod.
-- This mod is design to run on Minecraft 1.19.2 and later, and is optimised for 1.21. Please ensure you have the correct version of Minecraft installed before attempting to run this mod.
+- This mod is designed to run on Minecraft 1.21. Please ensure you have the correct version of Minecraft installed before attempting to run this mod.
 - There is no alternative versions of this mod for either Forge or Fabric, as there are plenty of similar mods available for both platforms.
