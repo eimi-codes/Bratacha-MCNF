@@ -1,6 +1,11 @@
-European Union Public Licence
+# EUPL-1.2 - European Union Public Licence 
+
+[About the EUPL](https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12)
+[EUPL-1.2](https://opensource.org/licenses/EUPL-1.2)
 
 Version 1.2, January 2017
+
+====================================================================================================
 
 Copyright (c) 2024, Éimí Mhic an Ridire, @eimi-codes on GitHub
 
@@ -9,6 +14,8 @@ This European Union Public Licence (the "Licence") applies to the Work (as defin
 The Work is provided under the terms of this Licence when the Licensor (as defined below) has placed the following notice immediately following the copyright notice for the Work:
 
 Licensed under the EUPL
+
+====================================================================================================
 
 1. Definitions
 
@@ -74,3 +81,5 @@ This Licence shall be governed by the law of the European Union country where th
 11. Additional Provisions
 
 The Licensor may include additional provisions in the Licence, provided that these do not contradict the Licence and do not reduce the scope of the rights granted by the Licence. Such additional provisions shall be included in a separate appendix to the Licence.
+
+====================================================================================================
