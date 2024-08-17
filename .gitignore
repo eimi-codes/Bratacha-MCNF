@@ -1,15 +1,29 @@
-# Compiled class file
-*.class
+# eclipse
+bin
+*.launch
+.settings
+.metadata
+.classpath
+.project
 
-# Log file
-*.log
+# idea
+out
+*.ipr
+*.iws
+*.iml
+.idea
 
-# BlueJ files
-*.ctxt
+# gradle
+build
+.gradle
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# other
+eclipse
+run
+runs
+run-data
 
+<<<<<<< HEAD
 # Package Files #
 *.jar
 *.war
@@ -25,3 +39,6 @@ replay_pid*
 
 # Mac OSX files
 .DS_Store
+=======
+repo
+>>>>>>> 9caa8d4 (chore: fix .gitignore)
