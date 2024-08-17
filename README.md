@@ -21,6 +21,8 @@ This mod is licensed under the [EUPL-1.2](https://opensource.org/licenses/EUPL-1
 - Éimí Mhic an Ridire, @eimi-codes on GitHub
 - Katrina Knight, @GaeaKat on GitHub
 
+This mod is inspired by [Flags That Represent](https://www.curseforge.com/minecraft/mc-mods/flags-that-represent) which is a Forge mod that adds flags to the game. This mod is designed to be a NeoForged alternative to that mod, however it is not a direct port of that mod. We are not affiliated with the creator of that mod, nor do we have any intention of copying their work. We are simply inspired by their work and wish to create a similar mod for NeoForged.
+
 ## Downloads
 
 - This mod is not yet available for download. Please check back later.
