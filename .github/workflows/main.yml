@@ -33,9 +33,10 @@ jobs:
           distribution: 'temurin'
 
       - name: Build with Gradle
-        uses: gradle/actions/setup-gradle@v3
-        with:
-          arguments: build
+        uses: gradle/actions/setup-gradle@v4
+      - name: Build
+        id: build
+        run: ./gradlew build
       - name: Prepare artifact metadata.
         id: prepare_artifact_metadata
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
@@ -44,7 +45,7 @@ jobs:
           echo ARTIFACT_NAME=bratacha-${{ steps.changelog.outputs.version }}.jar >> $GITHUB_OUTPUT
       - name: Archive build results
         # It is important to  archive .gradle as well since gradle stores the incremental build state there
-        run: tar -I zstd -cf build.tar.zst build/libs build/repo
+        run: tar -I zstd -cf build.tar.zst build/libs
       - name: Upload build and gradle folders
         uses: actions/upload-artifact@v4
         with:
