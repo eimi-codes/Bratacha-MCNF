@@ -1,3 +1,12 @@
+## [0.4.1](https://github.com/eimi-codes/Bratacha-MCNF/compare/v0.4.0...v0.4.1) (2024-08-17)
+
+
+### Bug Fixes
+
+* fix spelling og bloock ([341852c](https://github.com/eimi-codes/Bratacha-MCNF/commit/341852c171cfc22ea6e31b24b4766956a79421c3))
+
+
+
 # [0.4.0](https://github.com/eimi-codes/Bratacha-MCNF/compare/v0.2.0...v0.4.0) (2024-08-17)
 
 
