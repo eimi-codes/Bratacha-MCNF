@@ -1,4 +1,9 @@
-# [0.3.0](https://github.com/eimi-codes/Bratacha-MCNF/compare/v0.2.0...v0.3.0) (2024-08-17)
+# [0.4.0](https://github.com/eimi-codes/Bratacha-MCNF/compare/v0.2.0...v0.4.0) (2024-08-17)
+
+
+### Bug Fixes
+
+* add skip to release ([44898d6](https://github.com/eimi-codes/Bratacha-MCNF/commit/44898d611795394b9a399a815c26cf7f5373fde0))
 
 
 ### Features
