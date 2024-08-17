@@ -1,0 +1,74 @@
+name: Run production changelogs
+run-name: Run Production changelogs
+
+on:
+  push:
+    branches:
+      - 'main'
+
+
+permissions: write-all
+jobs:
+  conventional-commits:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Conventional Changelog Action
+        id: changelog
+        uses: TriPSs/conventional-changelog-action@v5
+        with:
+          github-token: ${{ secrets.github_token }}
+          skip-git-pull: "true"
+          version-file: "version.json"
+          version-path: "version"
+          skip-on-empty: "false"
+      - name: Setup JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Build with Gradle
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          arguments: build
+      - name: Prepare artifact metadata.
+        id: prepare_artifact_metadata
+        if: ${{ steps.changelog.outputs.skipped == 'false' }}
+        run: |
+          echo ARTIFACT_PATH=./build/libs/bratacha-${{ steps.changelog.outputs.version }}.jar >> $GITHUB_OUTPUT
+          echo ARTIFACT_NAME=bratacha-${{ steps.changelog.outputs.version }}.jar >> $GITHUB_OUTPUT
+      - name: Archive build results
+        # It is important to  archive .gradle as well since gradle stores the incremental build state there
+        run: tar -I zstd -cf build.tar.zst build/libs build/repo
+      - name: Upload build and gradle folders
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-artifacts
+          path: build.tar.zst
+          if-no-files-found: error
+          retention-days: 3
+      - name: Create Release
+        id: release
+        uses: softprops/action-gh-release@v1
+        if: ${{ steps.changelog.outputs.skipped == 'false' }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.github_token }}
+        with:
+          tag_name: ${{ steps.changelog.outputs.tag }}
+          name: ${{ steps.changelog.outputs.tag }}
+          discussion_category_name: 'Release'
+          body: ${{ steps.changelog.outputs.clean_changelog }}
+      - name: Upload Release Artifact
+        uses: actions/upload-release-asset@v1.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.release.outputs.upload_url }}
+          asset_path: ${{ needs.build.outputs.ARTIFACT_PATH }}
+          asset_name: ${{ needs.build.outputs.ARTIFACT_NAME }}
+          asset_content_type: application/zip
