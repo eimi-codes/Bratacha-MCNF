@@ -1,3 +1,7 @@
+## [0.4.7](https://github.com/eimi-codes/Bratacha-MCNF/compare/v0.4.6...v0.4.7) (2024-08-18)
+
+
+
 ## [0.4.6](https://github.com/eimi-codes/Bratacha-MCNF/compare/v0.4.5...v0.4.6) (2024-08-17)
 
 
@@ -11,15 +15,6 @@
 
 
 ## [0.4.3](https://github.com/eimi-codes/Bratacha-MCNF/compare/v0.4.2...v0.4.3) (2024-08-17)
-
-
-
-## [0.4.2](https://github.com/eimi-codes/Bratacha-MCNF/compare/v0.4.1...v0.4.2) (2024-08-17)
-
-
-### Bug Fixes
-
-* fix asset path ([be7f7e3](https://github.com/eimi-codes/Bratacha-MCNF/commit/be7f7e3267c0c64880121bd39eda58aeed85430d))
 
 
 
