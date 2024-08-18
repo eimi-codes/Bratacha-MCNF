@@ -1,3 +1,13 @@
 remote_theme: pages-themes/tactile@v0.2.0
 plugins:
 - jekyll-remote-theme 
+lsi: false
+safe: true
+source: https://github.com/eimi-codes/Bratacha-MCNF
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
