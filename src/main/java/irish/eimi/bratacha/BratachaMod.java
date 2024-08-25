@@ -1,6 +1,7 @@
 package irish.eimi.bratacha;
 
 import irish.eimi.bratacha.common.datagen.DataGeneration;
+import irish.eimi.bratacha.common.init.ModCreativeTabs;
 import irish.eimi.bratacha.common.init.Registration;
 import org.slf4j.Logger;
 
@@ -43,13 +44,13 @@ public class BratachaMod
     // Define mod id in a common place for everything to reference
     public static final String MODID = "bratacha";
     // Directly reference a slf4j logger
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public BratachaMod(IEventBus modEventBus, ModContainer modContainer)
     {
         Registration.init(modEventBus);
+        ModCreativeTabs.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
-        modEventBus.addListener(Registration::addCreative);
         modEventBus.addListener(DataGeneration::generate);
     }
 

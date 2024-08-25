@@ -13,5 +13,6 @@ public class BratachaGaeilgeLanguage extends LanguageProvider {
     @Override
     protected void addTranslations() {
         add(Registration.FLAG_BLOCK.get(),"Bratach na hÉireann");
+        add(Registration.FLAG_COUNTRY_ANDORRA_BLOCK.get(),"Bratach Andóra");
     }
 }
