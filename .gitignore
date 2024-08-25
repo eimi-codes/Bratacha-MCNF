@@ -38,6 +38,6 @@ replay_pid*
 
 # Mac OSX files
 .DS_Store
-.venv
 
 .ipynb_checkpoints/*
+**/.DS_Store
