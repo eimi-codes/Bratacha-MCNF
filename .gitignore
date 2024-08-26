@@ -12,7 +12,7 @@ out
 *.iws
 *.iml
 .idea
-
+.venv
 # gradle
 build
 .gradle
@@ -23,7 +23,6 @@ run
 runs
 run-data
 
-<<<<<<< HEAD
 # Package Files #
 *.jar
 *.war
@@ -39,6 +38,6 @@ replay_pid*
 
 # Mac OSX files
 .DS_Store
-=======
-repo
->>>>>>> 9caa8d4 (chore: fix .gitignore)
+
+.ipynb_checkpoints/*
+**/.DS_Store

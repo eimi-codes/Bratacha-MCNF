@@ -1,0 +1,53 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.flag-base",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "pole",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [7, 0, 0], "size": [1, 16, 1], "uv": [13, 12]},
+						{"origin": [7, 16, 0], "size": [1, 1, 1], "uv": [18, 12]}
+					]
+				},
+				{
+					"name": "flag",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "first_third",
+					"parent": "flag",
+					"pivot": [6, 6, 1],
+					"cubes": [
+						{"origin": [2, 6, 0], "size": [5, 10, 1], "uv": [13, 0]}
+					]
+				},
+				{
+					"name": "second_third",
+					"parent": "flag",
+					"pivot": [1, 6, 1],
+					"cubes": [
+						{"origin": [-3, 6, 0], "size": [5, 10, 1], "uv": [0, 12]}
+					]
+				},
+				{
+					"name": "third_third",
+					"parent": "flag",
+					"pivot": [-4, 6, 1],
+					"cubes": [
+						{"origin": [-8, 6, 0], "size": [5, 10, 1], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}
